@@ -33,6 +33,10 @@ HTMLIMAGE=,(trash),images\icons\trash.jpg,0.5,0.5
 HTMLIMAGE=,(pass),images\icons\passive.png,0.5,0.4
 ;weak
 HTMLIMAGE=,(weak),images\icons\weak.png,0.5,0.5
+;mid
+HTMLIMAGE=,(medi),images\icons\mid.png,0.5,0.5
+;strong
+HTMLIMAGE=,(strong),images\icons\strong.jpg,0.5,0.5
 ;arm
 HTMLIMAGE=,(arm),images\icons\armor.png,0.5,0.5
 ;dmg
