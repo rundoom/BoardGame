@@ -1,5 +1,5 @@
 Name,Description,Image,level,hp
-,(do): <br>(buff): (trash): ,,W,
+,,,,
 Грифон,"(do): Наносит (dmg)1<br>(pass): При получении (dmg) наносит (dmg)1<br>(trash): В этом цикле игрок или монстр наносит (dmg)1 всем кто нанёс (dmg) ему","images\cover\royalgriffin.gif",W,6
 Мечник,"(do): Нанести (dmg)4-(номер позиции) <br>(trash): Отдалить или приблизить позицию монстра на 1","images\cover\crusader.gif",W,4
 Монах,"(do): (dice): 1-3: Нанести (dmg)3<br>4-6: Вылечить самого повреждённого монстра на 3<br>(buff): При (do) Вылечить игрока на 1","images\cover\zealot.gif",M,7
