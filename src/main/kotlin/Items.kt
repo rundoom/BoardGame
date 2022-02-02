@@ -9,5 +9,9 @@ enum class Items(
     val handEffect: String,
     val passiveEffect: String? = null
 ) {
-
+    aootf2(
+        "Сфера неба", "aootf2.jpg",
+        "Наносит ${dmg}2 (1) и ${dmg}1 (2)",
+        "Наносит ${dmg}7-(номер позиции) всем монстрам"
+    )
 }

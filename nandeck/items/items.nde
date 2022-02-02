@@ -4,23 +4,21 @@ PAGE=6,10,PORTRAIT,HV
 DPI=300
 CARDSIZE=6,10
 BASERANGE=,ON
-LINK=creatures.csv
+LINK="items.csv"
 VISUAL=G, 10, 10
-IMAGE=,"images\template\creature_template.jpg",0%,{300/544}%,100%,{54100/544}%
+IMAGE=,images\template\items_template.jpg,0%,{300/544}%,100%,{54100/544}%
 ;NAME
-TEXTFONT="1-{(NAME)}",[NAME],{4400/326}%,{1900/544}%,{24300/326}%,{3200/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
+TEXTFONT="1-{(NAME)}",[NAME],{2500/326}%,{1300/544}%,{26700/326}%,{3900/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
 ;IMAGE
-IMAGE="1-{(IMAGE)}",[IMAGE],{1800/326}%,{5500/544}%,{29400/326}%,{22000/544}%,0,TP
+IMAGE="1-{(IMAGE)}",[IMAGE],{1800/326}%,{5500/544}%,{29400/326}%,37.5%,0,TP
 HTMLFONT=FontName,Small Fonts,10,,#000000
-;LEVEL
-ICONS="1-{(LEVEL)}",[LEVEL],{26200/326}%,{800/544}%,{5700/326}%,{5500/544}%,15%,15%,0,PT
-;HP_ICON
-IMAGE=,"images\template\hp.png",{-2700/326}%,{5400/544}%,{14600/326}%,{6600/544}%,0,TP
-;HP
-TEXTFONT="1-{(HP)}",[HP],{2500/326}%,{6500/544}%,{4200/326}%,{3200/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
 ;DESCRIPTION
 HTMLTEXT="1-{(DESCRIPTION)}",[DESCRIPTION],{1700/326}%,{30000/544}%,{29300/326}%,{21100/544}%,#FFFFFF,0,T,100,FontName
 ENDVISUAL
+;trash
+HTMLIMAGE=,(trash),e226c6ef7bd31a4a44e3d1695f1b801d.jpg,0.5,0.5,P
+;use
+HTMLIMAGE=,(use),recycle_PNG15.png,0.5,0.5,P
 ;buff
 HTMLIMAGE=,(buff),images\icons\buff.png,0.5,0.5
 ;do
@@ -43,9 +41,3 @@ HTMLIMAGE=,(hp),images\icons\hp.png,0.5,0.5
 HTMLIMAGE=,(1),images\icons\(1).png,0.5,0.5
 ;2
 HTMLIMAGE=,(2),images\icons\(2).png,0.5,0.5
-;weak
-ICON=,W,images\icons\weak.png
-;mid
-ICON=,M,images\icons\mid.png
-;strong
-ICON=,S,images\icons\strong.jpg
