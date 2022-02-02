@@ -10,6 +10,9 @@ enum class Tag(val meaning: String) {
     hp("(hp)"),
     pass("(pass)");
 
+    operator fun invoke(count: Int) = this.toString() + count
+    operator fun invoke(suffix: String) = this.toString() + suffix
+
     override fun toString(): String {
         return meaning
     }
