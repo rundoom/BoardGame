@@ -13,3 +13,4 @@ Name,Description,Image,level,hp
 Джин,"(do): (dice) 1-4: Дать (arm)2 для 3х (weak)<br>5-6: Повторить эффект 3х (weak)<br>(buff): При (do): Получить (arm)1 либо нанести (dmg)1 либо восстановить (hp)1","images\cover\genie.gif",M,8
 Нага,"(do): Нанести игроку (dmg)5 и нанести соседним монстрам (dmg)1<br>(buff): При (do): Увеличивает (dmg) на 2 и наносит (dmg)2 игроку","images\cover\naga.gif",M,8
 Гигант,"(do): Нанести (dmg)3 игроку и (dmg)1 остальным игрокам<br>(pass): Не действуют эффекты (trash) нацеленные на него<br>(buff): Нанести (dmg)3 монстру и (dmg)1 остальным монстам","images\cover\giant.gif",S,15
+Лучник,"(do): Нанести (dmg)(номер позиции) игроку<br>(trash): Нанести (dmg)(номер позиции) монстру","images\cover\archer.gif",W,2
