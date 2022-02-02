@@ -1,0 +1,27 @@
+BORDER=RECTANGLE
+UNIT=CM
+PAGE=6,10,PORTRAIT,HV
+DPI=300
+CARDSIZE=6,10
+BASERANGE=,ON
+LINK="D:\Program Files\nandeck\items\items.csv"
+VISUAL=G, 10, 10
+IMAGE=,"D:\Program Files\nandeck\template.jpg",0%,{300/544}%,100%,{54100/544}%
+;NAME
+TEXTFONT="1-{(NAME)}",[NAME],{2500/326}%,{1300/544}%,{26700/326}%,{3900/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
+;IMAGE
+IMAGE="1-{(IMAGE)}",[IMAGE],{1800/326}%,{5500/544}%,{29400/326}%,{22000/544}%,0,TP
+;testimg
+HTMLIMAGE=,(test),da5xgsz-edb844bc-9982-4454-9b2a-ade0fd5bf79e.png,0.5,0.5,P
+HTMLFONT=FontName,Small Fonts,10,,#000000
+;DESCRIPTION
+HTMLTEXT="1-{(DESCRIPTION)}",[DESCRIPTION],{1700/326}%,{30000/544}%,{29300/326}%,{21100/544}%,#FFFFFF,0,T,100,FontName
+;axe
+HTMLIMAGE=,(axe),294-2944820_battle-axe-free-icon-battle-axe-icon.png,0.4,0.4,P
+;spear
+HTMLIMAGE=,(spear),2451332.png,0.5,0.5,P
+;trash
+HTMLIMAGE=,(trash),e226c6ef7bd31a4a44e3d1695f1b801d.jpg,0.5,0.5,P
+;use
+HTMLIMAGE=,(use),recycle_PNG15.png,0.5,0.5,P
+ENDVISUAL
