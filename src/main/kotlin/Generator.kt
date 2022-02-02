@@ -9,12 +9,12 @@ fun generateCreatures(){
                 '"' + "(do): " + it.activeEffect.br + "<br>" +
                 if(it.passiveEffect != null){"(pass): " + it.passiveEffect.br + "<br>"} else {""} +
                 it.level.hand + ": " + it.handEffect.br + '"' + "," +
-                it.image + "," +
+                '"' + "images\\cover\\" + it.image + '"' + "," +
                 it.level + "," +
                 it.hp
     }
 
-   File("D:\\Program Files\\nandeck\\creatures\\creatures.csv").writeText(out, Charset.forName("Windows-1251"))
+   File("nandeck\\creatures\\creatures.csv").writeText(out, Charset.forName("Windows-1251"))
 }
 
 val String?.br get() = this?.replace("\n", "<br>")
