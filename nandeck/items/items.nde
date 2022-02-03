@@ -42,7 +42,7 @@ HTMLIMAGE=,(weak),images\icons\weak.png,0.5,0.5
 ;mid
 HTMLIMAGE=,(medi),images\icons\mid.png,0.5,0.5
 ;strong
-HTMLIMAGE=,(strong),images\icons\strong.jpg,0.5,0.5
+HTMLIMAGE=,(strong),images\icons\strong.png,0.5,0.5
 ;1
 HTMLIMAGE=,(1),images\icons\(1).png,0.5,0.5
 ;2

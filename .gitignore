@@ -2,3 +2,5 @@
 /.gradle/
 /build/
 /nandeck/creatures/out/
+/nandeck/locations/out/
+/nandeck/items/out/
