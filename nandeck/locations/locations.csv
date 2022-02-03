@@ -1,3 +1,14 @@
 Name,Description,Image,Arrangement
 ,,,
 Пролклятая церковь,"(pass): Монстры наносят (dmg)+1","images\cover\cursedchurch.png",WWWM
+Комната с шипами,"(pass): В конце каждого цикла игрок получает (dmg)1","images\cover\spikeroom.png",WWWW
+Тёмный лес,"(pass): В конце каждого цикла игрок теряет одну карту с руки","images\cover\darkforest.png",MMWW
+Тёмная комната,"(pass): Игрок не ходит в первом цикле","images\cover\darkroom.png",WWS
+Обеденный зал,"(pass): У карт нет ограничений на номер позиции","images\cover\dinnerroom.png",SSM
+Каменное плато,"(pass): На первом ходу у монстров (arm)3","images\cover\stoneplato.png",WWWWW
+Кладбище,"(pass): Каждый цикл можно заменить монстра в руке","images\cover\graveyard.png",WMS
+Обрыв,"(pass): После смерти монстров они просто сбрасываются","images\cover\cliff.png",WMWM
+Триумфальная арка,"(pass): При победе забираем по монстру из руки каждого игрока","images\cover\triumpharc.png",SSS
+Тронный зал,"(pass): Блок у игрока и монстров не спадает в конце циклов","images\cover\throneroom.png",SWWWWW
+Тесная комната,"(pass): Можно использовать только 3 предмета за цикл","images\cover\tightroom.png",S
+Подвал,"(pass): Нельзя использовать эффекты выбрасывания","images\cover\basement.png",MS
