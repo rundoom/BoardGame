@@ -16,9 +16,9 @@ HTMLFONT=FontName,Small Fonts,10,,#000000
 HTMLTEXT="1-{(DESCRIPTION)}",[DESCRIPTION],{1700/326}%,{30000/544}%,{29300/326}%,{21100/544}%,#FFFFFF,0,T,100,FontName
 ENDVISUAL
 ;trash
-HTMLIMAGE=,(trash),e226c6ef7bd31a4a44e3d1695f1b801d.jpg,0.5,0.5,P
+HTMLIMAGE=,(trash),images\icons\trash.jpg,0.5,0.5,P
 ;use
-HTMLIMAGE=,(use),recycle_PNG15.png,0.5,0.5,P
+HTMLIMAGE=,(use),images\icons\recycle.png,0.5,0.5,P
 ;buff
 HTMLIMAGE=,(buff),images\icons\buff.png,0.5,0.5
 ;do
