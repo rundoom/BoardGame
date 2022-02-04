@@ -9,7 +9,8 @@ enum class Creatures(
     val hp: Int,
     val activeEffect: String,
     val handEffect: String,
-    val passiveEffect: String? = null
+    val passiveEffect: String? = null,
+    val isEnabled: Boolean = false
 ) {
     royalgriffin(
         "Грифон", "royalgriffin.gif", W, 6,

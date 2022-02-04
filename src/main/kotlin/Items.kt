@@ -7,7 +7,8 @@ enum class Items(
     val image: String,
     val activeEffect: String,
     val handEffect: String,
-    val passiveEffect: String? = null
+    val passiveEffect: String? = null,
+    val isEnabled: Boolean = false
 ) {
     aootf2(
         "Сфера неба", "aootf2.png",
@@ -122,7 +123,7 @@ enum class Items(
     ),
     luckykiss(
         "Поцелуй удачи", "luckykiss.jpg",
-        "$dice: 1-3: 1 урон сильным и средним монстрам; 4-5: +1 к любому урону от карт; 6: 3 урона сильным, 2 урона средним, 1 урон слабым",
+        "$dice: 1-3: 1 урон ${strong} и ${medi}; 4-5: ${dmg("+1")} от карт; 6: ${dmg(3)} ${strong}, ${dmg(2)} по ${medi}, ${dmg(1)} по ${weak}",
         "${dmg(1)} всем монстрам, восстанавливает ${hp(4)}"
     ),
     cannon(
@@ -132,8 +133,8 @@ enum class Items(
     ),
     painshare(
         "Разделитель боли", "painshare.jpg",
-        "Выберите игрока, вы делите весь полученный урон на двоих",
-        "Выбранный игрок или монстр получает двойной урон в этом цикле"
+        "Выберите игрока, вы делите весь полученный ${dmg} на двоих",
+        "Выбранный игрок или монстр получает ${dmg("x2")} в этом цикле"
     ),
     ecstasy(
         "Таблетка экстази", "ecstasy.jpg",

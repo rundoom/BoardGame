@@ -3,8 +3,9 @@ import java.nio.charset.Charset
 
 
 fun generateCreatures(){
+    val isAnyEnabled = Creatures.values().any { it.isEnabled }
     val out = "Name,Description,Image,level,hp\n" + ",,,,\n" +
-    Creatures.values().joinToString("\n") {
+    Creatures.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
         it.showName + "," +
                 '"' + "(do): " + it.activeEffect.br + "<br>" +
                 if(it.passiveEffect != null){"(pass): " + it.passiveEffect.br + "<br>"} else {""} +
@@ -18,8 +19,9 @@ fun generateCreatures(){
 }
 
 fun generateItems(){
+    val isAnyEnabled = Items.values().any { it.isEnabled }
     val out = "Name,Description,Image\n" + ",,\n" +
-    Items.values().joinToString("\n") {
+    Items.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
         it.showName + "," +
                 '"' + "(do): " + it.activeEffect.br + "<br>" +
                 if(it.passiveEffect != null){"(pass): " + it.passiveEffect.br + "<br>"} else {""} +
@@ -31,8 +33,9 @@ fun generateItems(){
 }
 
 fun generateLocations(){
+    val isAnyEnabled = Locations.values().any { it.isEnabled }
     val out = "Name,Description,Image,Arrangement\n" + ",,,\n" +
-    Locations.values().joinToString("\n") {
+    Locations.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
         it.showName + "," +
                 '"' + "(pass): " + it.passiveEffect.br + '"' + ',' +
                 '"' + "images\\cover\\" + it.image + '"' + ',' +

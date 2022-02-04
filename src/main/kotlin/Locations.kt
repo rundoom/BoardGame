@@ -6,7 +6,8 @@ enum class Locations(
     val showName: String,
     val image: String,
     val passiveEffect: String,
-    val arrangement: List<Level>
+    val arrangement: List<Level>,
+    val isEnabled: Boolean = false
 ) {
     cursedchurch(
         "Пролклятая церковь", "cursedchurch.png",
