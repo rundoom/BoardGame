@@ -20,6 +20,10 @@ IMAGE=,images\template\hp.png,{-2700/326}%,{5400/544}%,{14600/326}%,{6600/544}%,
 TEXTFONT="1-{(HP)}",[HP],{2500/326}%,{6500/544}%,{4200/326}%,{3200/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
 ;DESCRIPTION
 HTMLTEXT="1-{(DESCRIPTION)}",[DESCRIPTION],{1700/326}%,{30000/544}%,{29300/326}%,{21100/544}%,#FFFFFF,0,T,100,FontName
+;basedamage
+IMAGE=,C:\Users\dima\IdeaProjects\BoardGame\nandeck\creatures\images\icons\dmg.png,{25400/326}%,{21200/544}%,{5700/326}%,{5700/544}%,0,PT
+;BASEDMG
+TEXTFONT="1-{(BASEDMG)}",[BASEDMG],{28600/326}%,43.75%,{2600/326}%,{3200/544}%,CENTER,CENTER,0,100,Small Fonts,15,T
 ENDVISUAL
 ;buff
 HTMLIMAGE=,(buff),images\icons\buff.png,0.5,0.5
