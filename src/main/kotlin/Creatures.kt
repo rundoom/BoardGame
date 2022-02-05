@@ -186,25 +186,21 @@ enum class Creatures(
     multihanded(
         "Многорукий многоног", "multihanded.png", M, 5, 0,
         "${dmg(2)} всем игрокам, Уходит в низ колоды монстров",
-        handEffect = "При ${doe}: ${arm(1)}. Лечит ${hp(1)}. базовый ${dmg("+1")} ",
-        isEnabled = true
+        handEffect = "При ${doe}: ${arm(1)}. Лечит ${hp(1)}. базовый ${dmg("+1")} "
     ),
     crabgirl(
         "Девочка краб", "crabgirl.png", S, 9, 0,
         "Наносит ${dmg} равный количеству монстров на столе",
-        handEffect = "При ${doe}: ${dice} ${arm}",
-        isEnabled = true
+        handEffect = "При ${doe}: ${dice} ${arm}"
         ),
     bro(
         "Братан", "bro.png", M, 6, 1,
         passiveEffect = "${dmg("+1")} монстрам слева и справа от себя",
-        handEffect = "Убить сильного монстра уничтожив слот с этой картой",
-        isEnabled = true
+        handEffect = "Убить сильного монстра уничтожив слот с этой картой"
     ),
     octopus(
         "Осьминог", "octopus.png", M, 8, 2,
         "${dmg(1)} игрокам слева и справа",
-        handEffect = "Наносит ${dmg(2)} монстру справа от атакованного",
-        isEnabled = true
+        handEffect = "Наносит ${dmg(2)} монстру справа от атакованного"
     ),
 }
