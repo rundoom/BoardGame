@@ -13,10 +13,10 @@ enum class Creatures(
     val handEffect: String = "",
     val isEnabled: Boolean = false
 ) {
-        royalgriffin(
+    royalgriffin(
         "Грифон", "royalgriffin.gif", W, 6, 1,
-            passiveEffect = "В этом раунде игрок или монстр наносит ${dmg(1)} всем кто нанёс ${dmg} ему",
-            handEffect = "При получении ${dmg} наносит ${dmg}1",
+        passiveEffect = "В этом раунде игрок или монстр наносит ${dmg(1)} всем кто нанёс ${dmg} ему",
+        handEffect = "При получении ${dmg} наносит ${dmg}1",
     ),
     crusader(
         "Мечник", "crusader.gif", W, 4, 0,
@@ -36,7 +36,7 @@ enum class Creatures(
     archangel(
         "Ангел", "archangel.gif", S, 12, 2,
         "$dice: 1-5:Уничтожить карту в руке<br>6: Следующий убитый монстр воскреснет с полным хп",
-        handEffect =  "Один раз за ход можно выкинуть предмет не выкидывая"
+        handEffect = "Один раз за ход можно выкинуть предмет не выкидывая"
     ),
     pikeman(
         "Копейщик", "pikeman.gif", W, 5, 1,
@@ -111,12 +111,16 @@ enum class Creatures(
     ),
     efreetsultan(
         "Ифрит", "efreetsultan.gif", M, 10, 3,
-        "При получении ${dmg} наносит ${dmg(1)}",
-        "При получении ${dmg} наносит ${dmg(1)} монстру который нанёс ${dmg}",
+        passiveEffect = "При получении ${dmg} наносит ${dmg(1)}",
+        handEffect = "При получении ${dmg} наносит ${dmg(1)} монстру который нанёс ${dmg}",
     ),
     archdevil(
         "Дьявол", "archdevil.gif", S, 15, 5,
-        passiveEffect = "Первый раз в раунде когда любой монстр получает $dmg, вместо этого нанести этот $dmg дьяволу и ${dmg(2)} игроку",
+        passiveEffect = "Первый раз в раунде когда любой монстр получает $dmg, вместо этого нанести этот $dmg дьяволу и ${
+            dmg(
+                2
+            )
+        } игроку",
         handEffect = "При нанесении $dmg монстру перенести его на любую позицию и нанести ${dmg(1)} урона соседям"
     ),
     emovdv(
@@ -130,9 +134,8 @@ enum class Creatures(
     ),
     drought(
         "Сушняк", "drought.png", W, 5, 1,
-        "${dmg(1)} игроку",
-        "Снижает ${dmg} любого игрока на 1",
-        "Снижает ${dmg} игрока на 1"
+        passiveEffect = "Снижает ${dmg} любого игрока на 1",
+        handEffect = "Снижает ${dmg} игрока на 1"
     ),
     princesskiller(
         "Принцесса-убийца", "princesskiller.png", S, 10, 5,
@@ -192,7 +195,7 @@ enum class Creatures(
         "Девочка краб", "crabgirl.png", S, 9, 0,
         "Наносит ${dmg} равный количеству монстров на столе",
         handEffect = "При ${doe}: ${dice} ${arm}"
-        ),
+    ),
     bro(
         "Братан", "bro.png", M, 6, 1,
         passiveEffect = "${dmg("+1")} монстрам слева и справа от себя",
