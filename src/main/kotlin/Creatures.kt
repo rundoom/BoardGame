@@ -15,7 +15,7 @@ enum class Creatures(
 ) {
         royalgriffin(
         "Грифон", "royalgriffin.gif", W, 6, 1,
-            passiveEffect = "В этом цикле игрок или монстр наносит ${dmg(1)} всем кто нанёс ${dmg} ему",
+            passiveEffect = "В этом раунде игрок или монстр наносит ${dmg(1)} всем кто нанёс ${dmg} ему",
             handEffect = "При получении ${dmg} наносит ${dmg}1",
     ),
     crusader(
@@ -116,7 +116,7 @@ enum class Creatures(
     ),
     archdevil(
         "Дьявол", "archdevil.gif", S, 15, 5,
-        passiveEffect = "Первый раз в цикле когда любой монстр получает $dmg, вместо этого нанести этот $dmg дьяволу и ${dmg(2)} игроку",
+        passiveEffect = "Первый раз в раунде когда любой монстр получает $dmg, вместо этого нанести этот $dmg дьяволу и ${dmg(2)} игроку",
         handEffect = "При нанесении $dmg монстру перенести его на любую позицию и нанести ${dmg(1)} урона соседям"
     ),
     emovdv(
