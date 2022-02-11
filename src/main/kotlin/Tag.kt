@@ -8,7 +8,14 @@ enum class Tag(val meaning: String) {
     strong("(strong)"),
     dmg("(dmg)"),
     hp("(hp)"),
-    pass("(pass)");
+    pass("(pass)"),
+    revive("(revive)"),
+    poison("(poison)"),
+    stun("(stun)"),
+    freeze("(freeze)"),
+    mad("(mad)"),
+    harm("(harm)"),
+    spike("spike");
 
     operator fun invoke(count: Int) = this.toString() + count
     operator fun invoke(suffix: String) = this.toString() + suffix

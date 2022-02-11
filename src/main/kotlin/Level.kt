@@ -3,3 +3,7 @@ enum class Level(val hand: String) {
     M("(buff)"),
     S("(buff)")
 }
+
+enum class DmgType {
+    ME, RA, AO
+}
