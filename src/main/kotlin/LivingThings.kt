@@ -102,7 +102,7 @@ enum class LivingThings(
     ),
     kitty(
         "Киска", "kitty.png", W, 3, 3, AO,
-        activeEffect =  "${dmg(3)} мне"
+        activeEffect = "${dmg(3)} мне"
     ),
     drought(
         "Сушняк", "drought.png", M, 5, 1, RA,
@@ -123,7 +123,7 @@ enum class LivingThings(
     deepterror(
         "Ужас глубин", "deepterror.png", S, 9, 4, ME,
         activeEffect = "${dmg(-1)} цели",
-        passiveEffect ="Игнорирует $arm"
+        passiveEffect = "Игнорирует $arm"
     ),
     gypsy(
         "Гадалка", "gypsy.png", S, 12, 0, RA,
@@ -148,7 +148,7 @@ enum class LivingThings(
     ),
     bro(
         "Братан", "bro.png", M, 6, 1, RA,
-        activeEffect =  "Уничтожить вражеского $strong чтобы уничтожить меня",
+        activeEffect = "Уничтожить вражеского $strong чтобы уничтожить меня",
         passiveEffect = "${dmg("+1")} союзникам слева и справа от себя"
     ),
     octopus(
