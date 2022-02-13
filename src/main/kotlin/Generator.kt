@@ -1,36 +1,41 @@
 import java.io.File
 import java.nio.charset.Charset
+import Tag.*
 
 
-fun generateCreatures(){
-    val isAnyEnabled = Creatures_new.values().any { it.isEnabled }
-    val out = "Name,Description,Image,level,hp,Basedmg\n" + ",,,,,\n" +
-            Creatures_new.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
-        it.showName + "," +
-                '"' + if(it.activeEffect != null){"(do): " + it.activeEffect.br + "<br>"} else {""} +
-                if(it.passiveEffect != null){"(pass): " + it.passiveEffect.br + "<br>"} else {""} +
-                if(it.handEffect != null) {it.level.hand + ": " + it.handEffect.br} else {""} + '"' + "," +
+fun generateLivingThings() {
+    val isAnyEnabled = LivingThings.values().any { it.isEnabled }
+    val out = "Name,Description,Image,level,hp,type,Basedmg\n" + ",,,,,," + '\n' +
+            LivingThings.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
+                it.showName + "," +
+                '"' +
+                (if (it.activeEffect != null) "$doe: ${it.activeEffect.br}<br>" else "") +
+                (if (it.passiveEffect != null) "$pass: ${it.passiveEffect.br}<br>" else "") +
+                '"' + "," +
                 '"' + "images\\cover\\" + it.image + '"' + "," +
                 it.level + "," +
                 it.hp + "," +
+                it.type + "," +
                 it.damage
-    }
+            }
 
-   File("nandeck\\creatures\\creatures.csv").writeText(out, Charset.forName("Windows-1251"))
+   File("nandeck\\living_things\\living_things.csv").writeText(out, Charset.forName("Windows-1251"))
 }
 
-fun generateItems(){
-    val isAnyEnabled = Items.values().any { it.isEnabled }
-    val out = "Name,Description,Image\n" + ",,\n" +
-    Items.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
+fun generateSurvivors(){
+    val isAnyEnabled = Survivors.values().any { it.isEnabled }
+    val out = "Name,Description,Image,Hp\n" + ",,," + '\n' +
+            Survivors.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
         it.showName + "," +
-                '"' + "(do): " + it.activeEffect.br + "<br>" +
-                if(it.passiveEffect != null){"(pass): " + it.passiveEffect.br + "<br>"} else {""} +
-                "(trash): " + it.handEffect.br + '"' + "," +
+                '"' +
+                (if (it.activeEffect != null) "$doe: ${it.activeEffect.br}<br>" else "") +
+                (if (it.passiveEffect != null) "$pass: ${it.passiveEffect.br}<br>" else "") +
+                "${it.harmType}${it.harmEffect.second}: " + it.harmEffect.first +
+                '"' + "," +
                 '"' + "images\\cover\\" + it.image + '"'
     }
 
-   File("nandeck\\items\\items.csv").writeText(out, Charset.forName("Windows-1251"))
+   File("nandeck\\survivors\\survivors.csv").writeText(out, Charset.forName("Windows-1251"))
 }
 
 fun generateLocations(){
@@ -38,7 +43,7 @@ fun generateLocations(){
     val out = "Name,Description,Image,Arrangement\n" + ",,,\n" +
     Locations.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
         it.showName + "," +
-                '"' + "(pass): " + it.passiveEffect.br + '"' + ',' +
+                '"' + "$pass: " + it.passiveEffect.br + '"' + ',' +
                 '"' + "images\\cover\\" + it.image + '"' + ',' +
         it.arrangement.joinToString("") { level -> level.toString() }
     }

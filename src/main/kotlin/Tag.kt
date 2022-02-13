@@ -16,7 +16,8 @@ enum class Tag(val meaning: String) {
     mad("(mad)"),
     harm("(harm)"),
     silence("(silence)"),
-    spike("spike");
+    discard("(discard)"),
+    spike("(spike)");
 
     operator fun invoke(count: Int) = this.toString() + count
     operator fun invoke(suffix: String) = this.toString() + suffix

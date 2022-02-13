@@ -4,7 +4,7 @@ PAGE=6,10,PORTRAIT,HV
 DPI=300
 CARDSIZE=6,10
 BASERANGE=,ON
-LINK="items.csv"
+LINK="survivors.csv"
 VISUAL=G, 10, 10
 IMAGE=,images\template\items_template.jpg,0%,{300/544}%,100%,{54100/544}%
 ;NAME

@@ -1,7 +1,7 @@
-import Level.*
-import Tag.*
 import DmgType.*
-import HarmType.*
+import HarmType.DISCARD
+import HarmType.PAIN
+import Tag.*
 
 
 //Идёт в любой бой
@@ -14,7 +14,7 @@ enum class Survivors(
     val hp: Int,
     val harmType: HarmType = PAIN,
     val activeEffect: String? = null,
-    val harmEffect: Pair<String, Int>?,
+    val harmEffect: Pair<String, Int>,
     val passiveEffect: String? = null,
     val isEnabled: Boolean = false
 ) {

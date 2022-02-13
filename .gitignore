@@ -1,6 +1,6 @@
 # Project exclude paths
 /.gradle/
 /build/
-/nandeck/creatures/out/
+/nandeck/living_things/out/
 /nandeck/locations/out/
-/nandeck/items/out/
+/nandeck/survivors/out/
