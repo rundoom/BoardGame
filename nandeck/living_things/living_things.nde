@@ -55,6 +55,8 @@ HTMLIMAGE=,(poison),..\images\icons\poison.png,0.5,0.5
 HTMLIMAGE=,(stun),..\images\icons\stun.png,0.5,0.5
 ;freeze
 HTMLIMAGE=,(freeze),..\images\icons\freeze.png,0.5,0.5
+;silence
+HTMLIMAGE=,(silence),..\images\icons\silence.png,0.5,0.5
 ;mad
 HTMLIMAGE=,(mad),..\images\icons\mad.png,0.5,0.5
 ;harm

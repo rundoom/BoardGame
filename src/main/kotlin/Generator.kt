@@ -15,7 +15,7 @@ fun generateLivingThings() {
                 '"' + "images\\cover\\" + it.image + '"' + "," +
                 it.level + "," +
                 it.hp + "," +
-                it.type + "," +
+                it.type.icon + "," +
                 it.damage
             }
 
@@ -32,7 +32,8 @@ fun generateSurvivors(){
                 (if (it.passiveEffect != null) "$pass: ${it.passiveEffect.br}<br>" else "") +
                 "${it.harmType}${it.harmEffect.second}: " + it.harmEffect.first +
                 '"' + "," +
-                '"' + "images\\cover\\" + it.image + '"'
+                '"' + "images\\cover\\" + it.image + '"' + ',' +
+                it.hp
     }
 
    File("nandeck\\survivors\\survivors.csv").writeText(out, Charset.forName("Windows-1251"))

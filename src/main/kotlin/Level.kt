@@ -1,9 +1,9 @@
 enum class Level { W, M, S }
 
-enum class DmgType(private val representation: String) {
-    ME("C"), RA("R"), AO("A");
+enum class DmgType(val icon: String, private val tag: String) {
+    ME("C", "(melee)"), RA("R", "(range)"), AO("A", "(aoe)");
 
-    override fun toString() = representation
+    override fun toString() = tag
 }
 
 enum class HarmType(private val representation: String) {

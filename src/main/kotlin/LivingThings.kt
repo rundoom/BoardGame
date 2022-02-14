@@ -4,6 +4,7 @@ import DmgType.*
 
 
 //handEffect = "При ${doe}: Получить ${arm(1)} либо нанести ${dmg(1)} либо восстановить ${hp(1)}"
+//Нанести кубик урона выбранному врагу
 enum class LivingThings(
     val showName: String,
     val image: String,
