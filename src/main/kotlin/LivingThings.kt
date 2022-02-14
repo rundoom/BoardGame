@@ -3,8 +3,6 @@ import Tag.*
 import DmgType.*
 
 
-//handEffect = "При ${doe}: Получить ${arm(1)} либо нанести ${dmg(1)} либо восстановить ${hp(1)}"
-//Нанести кубик урона выбранному врагу
 enum class LivingThings(
     val showName: String,
     val image: String,
@@ -37,122 +35,122 @@ enum class LivingThings(
         activeEffect = "$dice: 1-5:Уничтожить надетый предмет противника <br>6: Следующий союзник получивший смертельный${dmg} не получает его"
     ),
     pikeman(
-        "Копейщик", "", W, 5, 1, ME,
+        "", "", W, 5, 1, ME,
         activeEffect = poison(1)
     ),
     gremlin(
-        "Гремлин", "", W, 2, 1, ME,
+        "", "", W, 2, 1, ME,
         activeEffect = stun(1)
     ),
     stonegargoyle(
-        "Гаргулья", "", W, 4, 1, ME,
+        "", "", W, 4, 1, ME,
         activeEffect = arm(2)
     ),
     stonegolem(
-        "Каменный голем", "", W, 6, 1, ME,
+        "", "", W, 6, 1, ME,
         passiveEffect = "Отменить первый эффект противника"
     ),
     archmage(
-        "Холодильник", "", M, 5, 1, ME,
+        "", "", M, 5, 1, ME,
         "${freeze}, повторить удар в следующего противника"
     ),
     genie(
-        "Джин", "", M, 8, 0, RA,
+        "", "", M, 8, 0, RA,
         activeEffect = "$dice 1-4: Дать ${arm(3)} для 3х союзников<br>5-6: Повторить эффект 3х разных союзных ${weak}"
     ),
     naga(
-        "Нага", "", M, 5, 3, RA,
+        "", "", M, 5, 3, RA,
         "Нанести моим соседям ${dmg(1)}"
     ),
     giant(
-        "Гигант", "", S, 15, 1, AO,
+        "", "", S, 15, 1, AO,
         "На меня не действуют никакие эффекты кроме урона"
     ),
     archer(
-        "Лучник", "", W, 2, 0, RA,
+        "", "", W, 2, 0, RA,
         dmg("(номер позиции)")
     ),
     imp(
-        "Бес", "", M, 4, 1, RA,
+        "", "", M, 4, 1, RA,
         "$stun врагу и перезарядить союзника"
     ),
     gog(
-        "Чёрт", "", W, 1, 1, AO
+        "", "", W, 1, 1, AO
     ),
     hellhound(
-        "Адский пёс", "", W, 5, 0, ME,
+        " ", "", W, 5, 0, ME,
         activeEffect = "$dice 1-3: Нанести ${dmg("Количество полученного урона")}<br> 4-6: Нанести себе ${dmg(1)}"
     ),
     demon(
-        "Демон", "", W, 4, 0, ME,
+        "", "", W, 4, 0, ME,
         activeEffect = poison(1)
     ),
     pitfiend(
-        "Обитатель бездны", "", M, 8, 1, RA,
+        " ", "", M, 8, 1, RA,
         activeEffect = "Исцелить самого повреждённого союзника на ${hp(2)}",
         passiveEffect = "После смерти оставляет на своём месте $weak"
     ),
     efreetsultan(
-        "Ифрит", "", M, 8, 2, ME,
+        "", "", M, 8, 2, ME,
         passiveEffect = spike(2)
     ),
     archdevil(
-        "Дьявол", "", S, 15, 5, ME,
+        "", "", S, 15, 5, ME,
         passiveEffect = "${spike(2)}<br>Когда союзник получает $dmg, вместо этого нанести этот $dmg мне"
     ),
     kitty(
-        "Киска", "", W, 3, 3, AO,
+        "", "", W, 3, 3, AO,
         activeEffect = "${dmg(3)} мне"
     ),
     drought(
-        "Сушняк", "", M, 5, 1, RA,
+        "", "", M, 5, 1, RA,
         passiveEffect = "У врагов ${dmg(-1)}"
     ),
     princesskiller(
-        "Принцесса-убийца", "", S, 10, 3, RA,
+        "", "", S, 10, 3, RA,
         activeEffect = "Призвать $weak впереди себя"
     ),
     oneshotmosquito(
-        "Ваншотящий комар", "", M, 2, 9, RA,
+        " ", "", M, 2, 9, RA,
         activeEffect = "Нанести ${dmg(5)} себе"
     ),
     maniac(
-        "Маньяк", "", S, 10, 2, AO,
+        "", "", S, 10, 2, AO,
         passiveEffect = "$mad"
     ),
     deepterror(
-        "Ужас глубин", "", S, 9, 4, ME,
+        "", "", S, 9, 4, ME,
         activeEffect = "${dmg(-1)} цели",
         passiveEffect = "Игнорирует $arm"
     ),
     gypsy(
-        "Гадалка", "", S, 12, 0, RA,
+        "", "", S, 12, 0, RA,
         activeEffect = dmg(dice.toString())
     ),
     curse(
-        "Проклятье", "", S, 5, 0, RA,
+        "", "", S, 5, 0, RA,
         activeEffect = "Получает ${arm(2)}",
         passiveEffect = "Выкладывается на последнюю позицию<br> наносит ${dmg(1)} врагам совершающим $doe"
     ),
     lavamonster(
-        "Лава монстр", "", W, 4, 2, ME,
+        "", "", W, 4, 2, ME,
         passiveEffect = "Уничтожить меня вместо $harm союзника"
     ),
     multihanded(
-        "Многорукий многоног", "", M, 5, 0, AO,
+        "", "", M, 5, 0, AO,
         activeEffect = "${dmg(2)} всем вражеским людям даже вне боя, ухожу на дно колоды"
     ),
     crabgirl(
-        "Девочка краб", "", S, 9, 0, RA,
+        "", "", S, 9, 0, RA,
         activeEffect = dmg("количество монстров на столе")
     ),
     bro(
-        "Братан", "", M, 6, 1, RA,
+        "", "", M, 6, 1, RA,
         activeEffect = "Уничтожить вражеского $strong чтобы уничтожить меня",
         passiveEffect = "${dmg("+1")} союзникам слева и справа от себя"
     ),
     octopus(
-        "Осьминог", "", M, 8, 2, RA,
+        "", "", M, 8, 2, RA,
         activeEffect = "${dmg(1)} соседям цели"
     ),
 }
