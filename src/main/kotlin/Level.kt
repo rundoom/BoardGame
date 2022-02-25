@@ -1,4 +1,4 @@
-enum class Level { W, M, S }
+enum class Level { W, M, S, B }
 
 enum class DmgType(val icon: String, private val tag: String) {
     ME("C", "(melee)"), RA("R", "(range)"), AO("A", "(aoe)");

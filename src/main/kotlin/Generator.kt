@@ -22,6 +22,25 @@ fun generateLivingThings() {
    File("nandeck\\living_things\\living_things.csv").writeText(out, Charset.forName("Windows-1251"))
 }
 
+fun generateBosses() {
+    val isAnyEnabled = Bosses.values().any { it.isEnabled }
+    val out = "Name,Description,Image,hp,type,Basedmg,Arrangement\n" + ",,,,,," + '\n' +
+            Bosses.values().filter { !isAnyEnabled || it.isEnabled }.joinToString("\n") {
+                it.showName + "," +
+                '"' +
+                (if (it.activeEffect != null) "$doe: ${it.activeEffect.br}<br>" else "") +
+                (if (it.passiveEffect != null) "$pass: ${it.passiveEffect.br}<br>" else "") +
+                '"' + "," +
+                '"' + "images\\cover\\" + it.image + '"' + "," +
+                it.hp + "," +
+                it.type.icon + "," +
+                it.damage + ',' +
+                it.arrangement.joinToString("") { level -> level.toString() }
+            }
+
+   File("nandeck\\bosses\\bosses.csv").writeText(out, Charset.forName("Windows-1251"))
+}
+
 fun generateSurvivors(){
     val isAnyEnabled = Survivors.values().any { it.isEnabled }
     val out = "Name,Description,Image,Hp\n" + ",,," + '\n' +

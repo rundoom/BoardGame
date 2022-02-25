@@ -8,8 +8,7 @@ enum class LivingThings(
     val image: String,
     val level: Level,
     val hp: Int,
-    val damage: Int,
-    val type: DmgType,
+    val damage: Int,    val type: DmgType,
     val activeEffect: String? = null,
     val passiveEffect: String? = null,
     val isEnabled: Boolean = false

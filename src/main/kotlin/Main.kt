@@ -1,5 +1,6 @@
-fun main(args: Array<String>) {
+fun main() {
     generateLivingThings()
     generateSurvivors()
     generateLocations()
+    generateBosses()
 }
