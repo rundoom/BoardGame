@@ -2,13 +2,14 @@ import Level.*
 import Tag.*
 import DmgType.*
 
-
+//Отрава на всех
 enum class LivingThings(
     val showName: String,
     val image: String,
     val level: Level,
     val hp: Int,
-    val damage: Int,    val type: DmgType,
+    val damage: Int,
+    val type: DmgType,
     val activeEffect: String? = null,
     val passiveEffect: String? = null,
     val isEnabled: Boolean = false
@@ -31,53 +32,53 @@ enum class LivingThings(
     ),
     archangel(
         "", "", S, 12, 2, ME,
-        activeEffect = "$dice: 1-5:Уничтожить надетый предмет противника <br>6: Следующий союзник получивший смертельный${dmg} не получает его"
+        activeEffect = "$dice: 1-5:Уничтожить надетый предмет противника, если его нет нанести ${dmg(5)}<br>6: Следующий союзник получивший смертельный${dmg} не получает его"
     ),
-    pikeman(
-        "", "", W, 5, 1, ME,
+    syringe(
+        "Шприц", "syringe.png", W, 5, 1, ME,
         activeEffect = poison(1)
     ),
-    gremlin(
-        "", "", W, 2, 1, ME,
+    flyswatter(
+        "Мухобойка", "flyswatter.png", W, 2, 1, ME,
         activeEffect = stun(1)
     ),
-    stonegargoyle(
-        "", "", W, 4, 1, ME,
+    brick(
+        "Кирпич", "brick.png", W, 4, 1, ME,
         activeEffect = arm(2)
     ),
-    stonegolem(
-        "", "", W, 6, 1, ME,
+    microwave(
+        "Микроволновка", "microwave.png", W, 5, 1, ME,
         passiveEffect = "Отменить первый эффект противника"
     ),
-    archmage(
-        "", "", M, 5, 1, ME,
+    fridge(
+        "Холодильник", "fridge.png", M, 5, 1, ME,
         "${freeze}, повторить удар в следующего противника"
     ),
-    genie(
-        "", "", M, 8, 0, RA,
+    bookshelf(
+        "Книжная полка", "bookshelf.png", M, 8, 0, RA,
         activeEffect = "$dice 1-4: Дать ${arm(3)} для 3х союзников<br>5-6: Повторить эффект 3х разных союзных ${weak}"
     ),
-    naga(
-        "", "", M, 5, 3, RA,
+    toilet(
+        "Деревенский туалет", "toilet.png", M, 5, 3, RA,
         "Нанести моим соседям ${dmg(1)}"
     ),
     giant(
         "", "", S, 15, 1, AO,
         "На меня не действуют никакие эффекты кроме урона"
     ),
-    archer(
-        "", "", W, 2, 0, RA,
+    bow(
+        "Лук", "bow.png", W, 2, 0, RA,
         dmg("(номер позиции)")
     ),
-    imp(
-        "", "", M, 4, 1, RA,
+    hydrant(
+        "Гидрант", "", M, 4, 1, RA,
         "$stun врагу и перезарядить союзника"
     ),
-    gog(
-        "", "", W, 1, 1, AO
+    needlebed(
+        "Игольница", "needlebed.png", W, 1, 1, AO
     ),
     hellhound(
-        " ", "", W, 5, 0, ME,
+        "", "", M, 9, 0, ME,
         activeEffect = "$dice 1-3: Нанести ${dmg("Количество полученного урона")}<br> 4-6: Нанести себе ${dmg(1)}"
     ),
     demon(
